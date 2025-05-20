@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ConstraintLayoutStyle">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        style="@style/GuidelineStyle"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <TextView
+        android:id="@+id/label_edit_term_title"
+        style="@style/LabelStyle"
+        android:text="@string/label_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_term_title"
+        style="@style/EditFieldStyle"
+        android:hint="@string/placeholder_title"
+        app:layout_constraintTop_toBottomOf="@id/label_edit_term_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        tools:ignore="Autofill"/>
+
+    <TextView
+        android:id="@+id/label_edit_term_start"
+        style="@style/LabelStyle"
+        android:text="@string/label_start_date"
+        app:layout_constraintTop_toBottomOf="@id/edit_term_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_term_start"
+        style="@style/DateFieldStyle"
+        android:hint="@string/placeholder_date"
+        app:layout_constraintTop_toBottomOf="@id/label_edit_term_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        tools:ignore="Autofill"/>
+
+    <TextView
+        android:id="@+id/label_end"
+        style="@style/LabelStyle"
+        android:text="@string/label_end_date"
+        app:layout_constraintTop_toBottomOf="@id/edit_term_start"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_term_end"
+        style="@style/DateFieldStyle"
+        android:hint="@string/placeholder_date"
+        app:layout_constraintTop_toBottomOf="@id/label_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        tools:ignore="Autofill"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_save_term"
+        style="@style/FABStyle"
+        android:contentDescription="@string/action_save"
+        app:srcCompat="@android:drawable/ic_menu_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
