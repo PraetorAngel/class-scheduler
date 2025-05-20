@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ConstraintLayoutStyle">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline"
+        style="@style/GuidelineStyle"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guideline"
+        style="@style/GuidelineStyle"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <TextView
+        android:id="@+id/label_course_title"
+        style="@style/LabelStyle"
+        android:text="@string/label_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/course_detail_title"
+        style="@style/DisplayFieldStyle"
+        android:text="@string/placeholder_title"
+        app:layout_constraintTop_toBottomOf="@id/label_course_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/left_guideline" />
+
+    <TextView
+        android:id="@+id/label_course_status"
+        style="@style/LabelStyle"
+        android:text="@string/label_status"
+        app:layout_constraintTop_toBottomOf="@id/course_detail_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/course_detail_status"
+        style="@style/DisplayFieldStyle"
+        android:text="@string/placeholder_status"
+        app:layout_constraintTop_toBottomOf="@id/label_course_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/left_guideline" />
+
+    <TextView
+        android:id="@+id/label_course_start"
+        style="@style/LabelStyle"
+        android:text="@string/label_start_date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/left_guideline" />
+
+    <TextView
+        android:id="@+id/course_detail_start"
+        style="@style/DisplayFieldStyle"
+        android:text="@string/placeholder_date"
+        app:layout_constraintTop_toBottomOf="@id/label_course_start"
+        app:layout_constraintStart_toStartOf="@id/left_guideline"
+        app:layout_constraintEnd_toEndOf="@id/right_guideline" />
+
+    <CheckBox
+        android:id="@+id/checkbox_detail_alert_start"
+        style="@style/LabelStyle"
+        android:text="@string/label_start_alert"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/course_detail_start"
+        app:layout_constraintBottom_toBottomOf="@id/course_detail_status"
+        app:layout_constraintStart_toStartOf="@id/left_guideline"
+        android:layout_marginStart="-5sp"/>
+
+    <TextView
+        android:id="@+id/label_course_instructor"
+        style="@style/LabelStyle"
+        android:text="@string/label_instructor_name"
+        app:layout_constraintTop_toBottomOf="@id/course_detail_status"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/course_detail_instructor"
+        style="@style/DisplayFieldStyle"
+        android:text="@string/placeholder_name"
+        app:layout_constraintTop_toBottomOf="@id/label_course_instructor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/left_guideline" />
+
+    <TextView
+        android:id="@+id/label_course_end"
+        style="@style/LabelStyle"
+        android:text="@string/label_end_date"
+        app:layout_constraintBottom_toBottomOf="@id/label_course_instructor"
+        app:layout_constraintStart_toStartOf="@id/left_guideline" />
+
+    <TextView
+        android:id="@+id/course_detail_end"
+        style="@style/DisplayFieldStyle"
+        android:text="@string/placeholder_date"
+        app:layout_constraintTop_toBottomOf="@id/label_course_end"
+        app:layout_constraintStart_toStartOf="@id/left_guideline"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline" />
+
+    <CheckBox
+        android:id="@+id/checkbox_detail_alert_end"
+        style="@style/LabelStyle"
+        android:text="@string/label_end_alert"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/course_detail_end"
+        app:layout_constraintStart_toStartOf="@id/left_guideline"
+        app:layout_constraintBottom_toBottomOf="@id/course_detail_phone"
+        android:layout_marginStart="-5sp" />
+
+    <TextView
+        android:id="@+id/label_course_phone"
+        style="@style/LabelStyle"
+        android:text="@string/label_instructor_phone"
+        app:layout_constraintTop_toBottomOf="@id/course_detail_instructor"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/course_detail_phone"
+        style="@style/DisplayFieldStyle"
+        android:text="@string/placeholder_phone"
+        app:layout_constraintTop_toBottomOf="@id/label_course_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/left_guideline" />
+
+    <TextView
+        android:id="@+id/label_course_email"
+        style="@style/LabelStyle"
+        android:text="@string/label_instructor_email"
+        app:layout_constraintTop_toBottomOf="@id/course_detail_phone"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/course_detail_email"
+        style="@style/DisplayFieldStyle"
+        android:text="@string/placeholder_email"
+        app:layout_constraintTop_toBottomOf="@id/label_course_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline" />
+
+    <TextView
+        android:id="@+id/label_course_notes"
+        style="@style/LabelStyle"
+        android:text="@string/label_notes"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintEnd_toStartOf="@id/btn_share_notes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/right_guideline" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_share_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@android:drawable/ic_menu_share"
+        app:iconPadding="0sp"
+        app:iconGravity="textStart"
+        android:backgroundTint="?attr/colorPrimary"
+        app:cornerRadius="8dp"
+        android:contentDescription="@string/action_share_notes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btn_add_assessment"
+        app:layout_constraintEnd_toEndOf="@id/btn_add_assessment"
+        android:layout_marginTop="24sp"/>
+
+    <TextView
+        android:id="@+id/course_detail_notes"
+        style="@style/DisplayFieldStyle"
+        android:text="@string/placeholder_lorem"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/label_course_notes"
+        app:layout_constraintStart_toStartOf="@id/right_guideline"
+        app:layout_constraintEnd_toStartOf="@id/btn_share_notes" />
+
+    <TextView
+        android:id="@+id/label_course_assessments"
+        style="@style/LabelStyle"
+        android:text="@string/assessments"
+        android:textSize="24sp"
+        android:layout_marginTop="16sp"
+        app:layout_constraintTop_toBottomOf="@id/course_detail_notes"
+        app:layout_constraintStart_toStartOf="@id/right_guideline"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_course_assessments"
+        style="@style/RecyclerviewStyle"
+        app:layout_constraintTop_toBottomOf="@id/label_course_assessments"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/right_guideline"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add_assessment"
+        style="@style/FABStyle"
+        android:contentDescription="@string/action_add_assessment"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

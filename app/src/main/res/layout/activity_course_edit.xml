@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ConstraintLayoutStyle">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        style="@style/GuidelineStyle"
+        app:layout_constraintGuide_percent="0.55"/>
+
+    <TextView
+        android:id="@+id/label_course_title"
+        style="@style/LabelStyle"
+        android:text="@string/label_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_course_title"
+        style="@style/EditFieldStyle"
+        android:hint="@string/placeholder_title"
+        app:layout_constraintTop_toBottomOf="@id/label_course_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/label_course_start"
+        style="@style/LabelStyle"
+        android:text="@string/label_start_date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline" />
+
+    <EditText
+        android:id="@+id/edit_course_start"
+        style="@style/DateFieldStyle"
+        android:hint="@string/placeholder_date"
+        app:layout_constraintTop_toBottomOf="@id/label_course_start"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill" />
+
+    <CheckBox
+        android:id="@+id/checkbox_alert_start"
+        style="@style/LabelStyle"
+        android:text="@string/label_start_alert"
+        app:layout_constraintTop_toBottomOf="@id/edit_course_start"
+        app:layout_constraintBottom_toBottomOf="@id/spinner_course_status"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:layout_marginStart="-5sp"/>
+
+    <TextView
+        android:id="@+id/label_course_status"
+        style="@style/LabelStyle"
+        android:text="@string/label_status"
+        app:layout_constraintTop_toBottomOf="@id/edit_course_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_course_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/placeholder_status"
+        app:layout_constraintTop_toBottomOf="@id/label_course_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/label_course_instructor"
+        style="@style/LabelStyle"
+        android:text="@string/label_instructor_name"
+        app:layout_constraintTop_toBottomOf="@id/spinner_course_status"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_course_instructor"
+        style="@style/EditFieldStyle"
+        android:hint="@string/placeholder_name"
+        app:layout_constraintTop_toBottomOf="@id/label_course_instructor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/label_course_end"
+        style="@style/LabelStyle"
+        android:text="@string/label_end_date"
+        app:layout_constraintBottom_toBottomOf="@id/label_course_instructor"
+        app:layout_constraintStart_toStartOf="@id/guideline" />
+
+    <EditText
+        android:id="@+id/edit_course_end"
+        style="@style/DateFieldStyle"
+        android:hint="@string/placeholder_date"
+        app:layout_constraintTop_toBottomOf="@id/label_course_end"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill" />
+
+    <CheckBox
+        android:id="@+id/checkbox_alert_end"
+        style="@style/LabelStyle"
+        android:text="@string/label_end_alert"
+        app:layout_constraintTop_toBottomOf="@id/edit_course_end"
+        app:layout_constraintBottom_toBottomOf="@id/edit_course_phone"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:layout_marginStart="-5sp"/>
+
+
+    <TextView
+        android:id="@+id/label_course_phone"
+        style="@style/LabelStyle"
+        android:text="@string/label_instructor_phone"
+        app:layout_constraintTop_toBottomOf="@id/edit_course_instructor"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_course_phone"
+        style="@style/EditFieldStyle"
+        android:inputType="phone"
+        android:hint="@string/placeholder_phone"
+        app:layout_constraintTop_toBottomOf="@id/label_course_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/label_course_email"
+        style="@style/LabelStyle"
+        android:text="@string/label_instructor_email"
+        app:layout_constraintTop_toBottomOf="@id/edit_course_phone"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_course_email"
+        style="@style/EditFieldStyle"
+        android:inputType="textEmailAddress"
+        android:hint="@string/placeholder_email"
+        app:layout_constraintTop_toBottomOf="@id/label_course_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/label_course_notes"
+        style="@style/LabelStyle"
+        android:text="@string/label_notes"
+        app:layout_constraintTop_toBottomOf="@id/edit_course_email"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_course_notes"
+        style="@style/EditFieldStyle"
+        android:hint="@string/placeholder_lorem"
+        android:inputType="textMultiLine"
+        android:gravity="top|start"
+        android:ellipsize="end"
+        android:maxLines="9"
+        android:overScrollMode="ifContentScrolls"
+        app:layout_constraintTop_toBottomOf="@id/label_course_notes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_save_course"
+        style="@style/FABStyle"
+        android:contentDescription="@string/action_save"
+        app:srcCompat="@android:drawable/ic_menu_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

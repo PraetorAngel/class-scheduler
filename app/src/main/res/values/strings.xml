@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">C196Final</string>
+
+    <string name="terms">Terms</string>
+    <string name="courses">Courses</string>
+    <string name="assessments">Assessments</string>
+
+    <string name="label_term">Term</string>
+    <string name="label_course">Course</string>
+    <string name="label_assessment">Assessment</string>
+    <string name="label_title">Title</string>
+    <string name="label_start_date">Start Date</string>
+    <string name="label_end_date">End Date</string>
+    <string name="label_status">Status</string>
+    <string name="label_instructor_name">Instructor Name</string>
+    <string name="label_instructor_phone">Phone</string>
+    <string name="label_instructor_email">Email</string>
+    <string name="label_notes">Notes</string>
+    <string name="label_type">Type</string>
+    <string name="label_add_course">Add course to %1$s</string>
+    <string name="label_delete">Confirm delete %1$s</string>
+    <string name="label_start_alert">Alert on start date</string>
+    <string name="label_end_alert">Alert on end date</string>
+
+    <string name="placeholder_date">yyyy-MM-dd</string>
+    <string name="placeholder_name">add name</string>
+    <string name="placeholder_title">add title</string>
+    <string name="placeholder_type">add type</string>
+    <string name="placeholder_phone">281&#8211;330&#8211;8004</string>
+    <string name="placeholder_email">example@example.com</string>
+    <string name="placeholder_status">status</string>
+    <string name="placeholder_lorem">Lorem ipsum dolor sit amet&#8230;</string>
+
+    <string name="action_save">Save</string>
+    <string name="action_add_term">Add Term</string>
+    <string name="action_add_course">Add Course</string>
+    <string name="action_add_assessment">Add Assessment</string>
+    <string name="action_share_notes">Share notes&#8230;</string>
+    <string name="action_yes">Yes</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_acknowledge">OK</string>
+
+    <string name="details">%1$s details</string>
+    <string name="updated">%1$s updated</string>
+    <string name="added">%1$s added</string>
+    <string name="not_found">%1$s not found</string>
+    <string name="edit">%1$s (edit)</string>
+
+    <string name="toast_date_mismatch">Start date must be before or same as end date</string>
+    <string name="toast_permission">Alert not scheduled: permission required</string>
+    <string name="toast_all_required">All fields are required</string>
+    <string name="toast_title_start_end_required">Title, start date, and end date are required</string>
+    <string name="toast_nothing_to_share">No notes to share</string>
+    <string name="toast_invalid_email">Invalid email format</string>
+    <string name="toast_invalid_phone">Invalid phone number</string>
+    <string name="toast_sharing_notes">Sharing notes:\n%1$s</string>
+    <string name="toast_missing_id">Missing term, course, or assessment ID</string>
+
+    <string name="message_delete_confirmation">Are you sure you want to delete this %1$s?</string>
+    <string name="message_delete_course">Are you sure you want to delete this course and all its assessments?</string>
+    <string name="message_delete_term_fail">"You must first delete all associated courses before deleting this term."</string>
+    <string name="message_cannot_delete_term">Cannot Delete Term</string>
+
+    <string name="date_range">%1$s - %2$s</string>
+    <string name="alert_starts_today">%1$s starts today!</string>
+    <string name="alert_ends_today">%1$s ends today!</string>
+
+    <string-array name="course_status_options">
+        <item>In Progress</item>
+        <item>Completed</item>
+        <item>Dropped</item>
+        <item>Plan to Take</item>
+    </string-array>
+
+</resources>

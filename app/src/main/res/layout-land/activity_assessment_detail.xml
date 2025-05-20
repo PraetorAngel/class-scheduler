@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ConstraintLayoutStyle">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        style="@style/GuidelineStyle"
+        app:layout_constraintGuide_percent="0.45"/>
+
+    <TextView
+        android:id="@+id/label_title"
+        style="@style/LabelStyle"
+        android:text="@string/label_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/assessment_detail_title"
+        style="@style/DisplayFieldStyle"
+        android:text="@string/placeholder_title"
+        app:layout_constraintTop_toBottomOf="@id/label_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/label_type"
+        style="@style/LabelStyle"
+        android:text="@string/label_type"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/assessment_detail_type"
+        style="@style/DisplayFieldStyle"
+        android:text="@string/placeholder_type"
+        app:layout_constraintTop_toBottomOf="@id/label_type"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/label_start"
+        style="@style/LabelStyle"
+        android:text="@string/label_start_date"
+        app:layout_constraintTop_toBottomOf="@id/assessment_detail_type"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/assessment_detail_start"
+        style="@style/DisplayFieldStyle"
+        android:text="@string/placeholder_date"
+        app:layout_constraintTop_toBottomOf="@id/label_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/label_end"
+        style="@style/LabelStyle"
+        android:text="@string/label_end_date"
+        app:layout_constraintTop_toBottomOf="@id/assessment_detail_start"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/assessment_detail_end"
+        style="@style/DisplayFieldStyle"
+        android:text="@string/placeholder_date"
+        app:layout_constraintTop_toBottomOf="@id/label_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline" />
+
+    <CheckBox
+        android:id="@+id/checkbox_detail_alert_start"
+        style="@style/LabelStyle"
+        android:text="@string/label_start_alert"
+        android:enabled="false"
+        app:layout_constraintTop_toTopOf="@id/label_start"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        android:layout_marginTop="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkbox_detail_alert_end"
+        style="@style/LabelStyle"
+        android:text="@string/label_end_alert"
+        android:enabled="false"
+        app:layout_constraintTop_toTopOf="@id/label_end"
+        app:layout_constraintStart_toEndOf="@id/guideline"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

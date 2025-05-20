@@ -1,0 +1,18 @@
+*.jks
+output.txt
+app-release.apk
+
+# IDE stuff
+.idea/
+*.iml
+
+# Gradle build output
+.gradle/
+build/
+app/build/
+*.lock
+local.properties
+
+# OS cruft
+.DS_Store
+Thumbs.db
